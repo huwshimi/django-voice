@@ -40,8 +40,11 @@ def list(request, list=False, type=False, status=False):
         title = "Closed Feedback"
         feedback = feedback.filter(status__status='closed')
     elif list == "mine":
-        title = "My Feedback"
-        feedback = feedback.filter(user=request.user)
+        if not request.user.is_authenticated():
+            return HttpResponseRedirect('/accounts/login/?next=%s' % request.path)
+        else:
+            title = "My Feedback"
+            feedback = feedback.filter(user=request.user)
     
     if not type:
         type = "all"
