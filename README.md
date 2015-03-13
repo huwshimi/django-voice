@@ -1,14 +1,12 @@
-This is here for posterity, this is now being kindly maintained over at https://github.com/gkmngrgn/django-voice.
+#This is here for posterity, this is now being kindly maintained over at https://github.com/gkmngrgn/django-voice.
 
-Django Voice
-============
+##Django Voice
 
 1.  About
 2.  Authors
 3.  Requirements
 
-1. ABOUT
---------
+###1. ABOUT
 
 DjangoVoice is a very simple application to enable user feedback that 
 is integrated with your Django project.
